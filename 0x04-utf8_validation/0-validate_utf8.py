@@ -6,15 +6,19 @@ UTF-8 Validation
 
 def validUTF8(data):
     """
-    data: a list of integers
-    Return: True if data is a valid UTF-8
-    encoding, else return False
+    Check if a list of integers represents valid UTF-8 encoding.
+
+    Args:
+        data (list): A list of integers.
+
+    Returns:
+        bool: True if data is a valid UTF-8 encoding, else False.
     """
     byte_count = 0
 
     for i in data:
         if byte_count == 0:
-            if i >> 5 == 0b110 or i >> 5 == 0b1110:
+            if i >> 5 == 0b110:
                 byte_count = 1
             elif i >> 4 == 0b1110:
                 byte_count = 2
