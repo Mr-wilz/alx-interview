@@ -3,7 +3,6 @@
 UTF-8 Validation
 """
 
-
 def validUTF8(data):
     """
     Check if a list of integers represents valid UTF-8 encoding.
